@@ -11,7 +11,7 @@ mvn archetype:generate \
 -DarchetypeArtifactId=kylin-archetype \
 -DarchetypeVersion=1.0-SNAPSHOT \
 -DgroupId=your.group.id.here \
--DartifactId=your-artifactId \
+-DartifactId=test-artifactId \
 -DarchetypeCatalog=local
 ```
 

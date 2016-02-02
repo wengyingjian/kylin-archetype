@@ -11,8 +11,8 @@ import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 
 @SpringBootApplication(scanBasePackages = {"com.wengyingjian.kylin", "${package}"})
 @EnableAutoConfiguration(exclude = {DataSourceAutoConfiguration.class})
-public class ApiApp {
+public class ServiceApp {
     public static void main(String[] args) {
-        SpringApplication.run(ApiApp.class, args);
+        SpringApplication.run(ServiceApp.class, args);
     }
 }

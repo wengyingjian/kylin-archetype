@@ -17,11 +17,12 @@
             <artifactId>${rootArtifactId}-common</artifactId>
             <version>${version}</version>
         </dependency>
-
         <dependency>
-            <groupId>com.wengyingjian.kylin</groupId>
-            <artifactId>kylin-datasource</artifactId>
+            <groupId>${groupId}</groupId>
+            <artifactId>${rootArtifactId}-service</artifactId>
+            <version>${version}</version>
         </dependency>
+
         <dependency>
             <groupId>com.wengyingjian.kylin</groupId>
             <artifactId>kylin-redis</artifactId>
