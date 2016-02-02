@@ -11,7 +11,7 @@
         id,user_name,type
     </sql>
 
-    <select id="selectUsers" resultMap="userMapper" parameterType="${artifactId}.common.model.query.UserQuery">
+    <select id="selectUsers" resultMap="userMapper" parameterType="__artifactId__.common.model.query.UserQuery">
         SELECT
         <include refid="base_Column_List"/>
         FROM t_user
@@ -31,7 +31,7 @@
         </if>
     </select>
 
-    <insert id="insertSelective" parameterType="${artifactId}.common.model.User">
+    <insert id="insertSelective" parameterType="__artifactId__.common.model.User">
         INSERT INTO t_user
         <trim prefix="(" suffix=")" suffixOverrides=",">
             <if test="userName != null">
@@ -50,18 +50,5 @@
             </if>
         </trim>
     </insert>
-
-    <update id="updateUser" parameterType="${artifactId}.common.model.User">
-        UPDATE t_user
-        <set>
-            <if test="userName != null">
-                user_name = #{userName},
-            </if>
-            <if test="type != null">
-                type = #{type},
-            </if>
-        </set>
-        WHERE id = #{id}
-    </update>
 
 </mapper>

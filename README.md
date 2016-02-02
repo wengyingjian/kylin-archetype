@@ -8,7 +8,7 @@
 ```
 mvn archetype:generate \
 -DarchetypeGroupId=com.wengyingjian.kylin \
--DarchetypeArtifactId=kylin-archetype-api \
+-DarchetypeArtifactId=kylin-archetype \
 -DarchetypeVersion=1.0-SNAPSHOT \
 -DgroupId=your.group.id.here \
 -DartifactId=your-artifactId \

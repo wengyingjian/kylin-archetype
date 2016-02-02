@@ -14,6 +14,7 @@
     <packaging>pom</packaging>
 
     <modules>
+        <module>${rootArtifactId}-api</module>
         <module>${rootArtifactId}-common</module>
         <module>${rootArtifactId}-service</module>
     </modules>

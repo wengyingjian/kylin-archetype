@@ -16,4 +16,7 @@ public interface UserMapper {
     int insertSelective(User user);
 
     List<User> selectUsers(UserQuery userQuery);
+
+    int updateUser(User user);
+
 }

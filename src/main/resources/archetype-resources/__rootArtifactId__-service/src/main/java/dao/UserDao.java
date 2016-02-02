@@ -29,4 +29,8 @@ public class UserDao {
     public int insertSelective(User user) {
         return masterUserMapper.insertSelective(user);
     }
+
+    public int updateUser(User user) {
+        return masterUserMapper.updateUser(user);
+    }
 }

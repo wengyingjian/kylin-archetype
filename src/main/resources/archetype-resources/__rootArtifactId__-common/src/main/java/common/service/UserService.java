@@ -5,6 +5,7 @@ package ${package}.common.service;
 
 import com.wengyingjian.kylin.common.model.Result;
 import ${package}.common.model.User;
+import ${package}.common.model.query.UserQuery;
 import java.util.List;
 
 
@@ -14,12 +15,12 @@ import java.util.List;
 public interface UserService {
 
     /**
-     * 根据用户类型查找用户
+     * 根据userQuery查找
      *
-     * @param type 用户类型
+     * @param userQuery
      * @return
      */
-    public Result<List<User>> findUsers(Integer type);
+    public Result<List<User>> findUsers(UserQuery userQuery);
 
     /**
      * 添加用户
@@ -29,5 +30,12 @@ public interface UserService {
      */
     public Result<Boolean> addUser(User user);
 
+    /**
+     * 修改用户信息
+     *
+     * @param user
+     * @return
+     */
+    public Result<Boolean> modifyUser(User user);
 
 }

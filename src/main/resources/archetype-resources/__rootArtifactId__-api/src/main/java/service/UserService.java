@@ -1,7 +1,7 @@
 #set( $symbol_pound = '#' )
 #set( $symbol_dollar = '$' )
 #set( $symbol_escape = '\' )
-package ${package}.service.impl;
+package ${package}.service;
 
 import com.wengyingjian.kylin.common.model.Result;
 import com.wengyingjian.kylin.common.utils.ResultUtil;
@@ -19,17 +19,19 @@ import java.util.List;
 /**
  * Created by wengyingjian on 16/2/1.
  */
-@RemoteService(serviceType = ServiceType.HESSIAN, serviceInterface = UserService.class, exportPath = "/userService")
+@Service
 public class UserServiceImpl implements UserService {
 
     @Autowired
     private UserDao userDao;
 
     @Override
-    public Result<List<User>> findUsers(UserQuery userQuery) {
-        if(userQuery==null){
-            return ResultUtil.genCommonError("userQuery bean can not be null");
+    public Result<List<User>> findUsers(Integer type) {
+        if (!validateUserType(type)) {
+            return ResultUtil.genCommonError("target type:%s not supported!", type);
         }
+        UserQuery userQuery = new UserQuery();
+        userQuery.setType(type);
         return ResultUtil.genSuccessResult(userDao.selectUsers(userQuery));
     }
 
@@ -43,10 +45,23 @@ public class UserServiceImpl implements UserService {
         return ResultUtil.genSuccessResult(result);
     }
 
-    @Override
-    public Result<Boolean> modifyUser(User user) {
-        int affectedRpws = userDao.updateUser(user);
-        boolean result = affectedRpws == 0 ? false : true;
-        return ResultUtil.genSuccessResult(result);
+
+    /**
+     * 验证用户的类型是否有效
+     *
+     * @param type
+     * @return
+     */
+    private boolean validateUserType(Integer type) {
+        if (type == null) {
+            return false;
+        }
+        for (UserType userType : UserType.values()) {
+            if (type == userType.getCode()) {
+                return true;
+            }
+        }
+        return false;
     }
+
 }
