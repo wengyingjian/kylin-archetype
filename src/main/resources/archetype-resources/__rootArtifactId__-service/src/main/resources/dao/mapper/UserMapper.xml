@@ -18,15 +18,15 @@
         SELECT
         <include refid="base_Column_List"/>
         FROM t_user
-        <where>{aaa}
+        <where>
             <if test="id != null">
                id = $pound$brace_b id $brace_e
             </if>
             <if test="userName != null">
                 AND user_name = $pound$brace_b userName $brace_e
             </if>
-            <if test="type != null">
-                AND type = $pound$brace_b userType $brace_e
+            <if test="userType != null">
+                AND user_type = $pound$brace_b userType $brace_e
             </if>
         </where>
         <if test="pageQuery != null">
@@ -49,7 +49,7 @@
                 $pound$brace_b userName $brace_e,
             </if>
             <if test="userType != null">
-                $pound$brace_b user_type $brace_e,
+                $pound$brace_b userType $brace_e,
             </if>
         </trim>
     </insert>
@@ -61,7 +61,7 @@
                 user_name = $pound$brace_b userName $brace_e,
             </if>
             <if test="userType != null">
-                type = $pound$brace_b user_type $brace_e,
+                user_type = $pound$brace_b userType $brace_e,
             </if>
         </set>
         WHERE id = $pound$brace_b id $brace_e
