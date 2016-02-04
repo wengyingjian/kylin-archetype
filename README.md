@@ -1,4 +1,4 @@
-# kylin-archetype-api
+# kylin-archetype
  maven archetype for  service module  of kylin project 
 
 
