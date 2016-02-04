@@ -12,8 +12,8 @@ import com.wengyingjian.kylin.common.model.query.PageQuery;
 public class UserQuery extends PageQuery {
 
     private Integer id;
-    private Integer type;
-    private String name;
+    private String userName;
+    private Integer userType;
 
     public Integer getId() {
         return id;
@@ -23,19 +23,19 @@ public class UserQuery extends PageQuery {
         this.id = id;
     }
 
-    public Integer getType() {
-        return type;
+    public String getUserName() {
+        return userName;
     }
 
-    public void setType(Integer type) {
-        this.type = type;
+    public void setUserName(String userName) {
+        this.userName = userName;
     }
 
-    public String getName() {
-        return name;
+    public Integer getUserType() {
+        return userType;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setUserType(Integer userType) {
+        this.userType = userType;
     }
 }

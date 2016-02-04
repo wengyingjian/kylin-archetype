@@ -14,7 +14,7 @@ public class User implements Serializable {
 
     private String userName;
 
-    private Integer type;
+    private Integer userType;
 
     public Integer getId() {
         return id;
@@ -32,11 +32,11 @@ public class User implements Serializable {
         this.userName = userName;
     }
 
-    public Integer getType() {
-        return type;
+    public Integer getUserType() {
+        return userType;
     }
 
-    public void setType(Integer type) {
-        this.type = type;
+    public void setUserType(Integer userType) {
+        this.userType = userType;
     }
 }

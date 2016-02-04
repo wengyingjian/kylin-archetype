@@ -1,6 +1,3 @@
-#set( $symbol_pound = '#' )
-#set( $symbol_dollar = '$' )
-#set( $symbol_escape = '\' )
 package ${package}.controller;
 
 import com.wengyingjian.kylin.common.model.Result;
@@ -30,16 +27,16 @@ public class UserController {
 
     @RequestMapping("list")
     public Result<List<User>> listUsers(HttpServletRequest request,//
-                                        @RequestParam(value = "type", required = false) Integer type) {//
+                                        @RequestParam(value = "type", required = false) Integer userType) {//
 
-        return userService.listUsers(type);
+        return userService.listUsers(userType);
     }
 
     @RequestMapping("update")
     public Result<Boolean> update(HttpServletRequest request,
                                   @RequestParam("user_id") Integer uid,//
                                   @RequestParam(value = "user_name", required = false) String userName,
-                                  @RequestParam(value = "user_type", required = false) Integer type) {
-        return userService.modifyUser(uid,userName,type);
+                                  @RequestParam(value = "user_type", required = false) Integer userType) {
+        return userService.modifyUser(uid,userName,userType);
     }
 }
