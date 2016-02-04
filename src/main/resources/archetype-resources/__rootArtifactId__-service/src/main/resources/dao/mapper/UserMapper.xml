@@ -1,29 +1,32 @@
+#set( $pound = '#' )
+#set( $brace_b = '{' )
+#set( $brace_e = '}' )
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="${package}.dao.mapper.UserMapper">
     <resultMap id="userMapper" type="${package}.common.model.User">
         <id column="id" property="id"/>
         <result column="user_name" property="userName"/>
-        <result column="type" property="type"/>
+        <result column="user_type" property="userType"/>
     </resultMap>
 
     <sql id="base_Column_List">
-        id,user_name,type
+        id,user_name,user_type
     </sql>
 
     <select id="selectUsers" resultMap="userMapper" parameterType="${package}.common.model.query.UserQuery">
         SELECT
         <include refid="base_Column_List"/>
         FROM t_user
-        <where>
+        <where>{aaa}
             <if test="id != null">
-                id = #{id}
+               id = $pound$brace_b id $brace_e
             </if>
             <if test="userName != null">
-                AND user_name = #{userName}
+                AND user_name = $pound$brace_b userName $brace_e
             </if>
             <if test="type != null">
-                AND type = #{type}
+                AND type = $pound$brace_b userType $brace_e
             </if>
         </where>
         <if test="pageQuery != null">
@@ -37,16 +40,16 @@
             <if test="userName != null">
                 user_name,
             </if>
-            <if test="type != null">
-                type,
+            <if test="userType != null">
+                user_type,
             </if>
         </trim>
         <trim prefix="values (" suffix=")" suffixOverrides=",">
             <if test="userName != null">
-                #{userName},
+                $pound$brace_b userName $brace_e,
             </if>
-            <if test="type != null">
-                #{type},
+            <if test="userType != null">
+                $pound$brace_b user_type $brace_e,
             </if>
         </trim>
     </insert>
@@ -55,13 +58,13 @@
         UPDATE t_user
         <set>
             <if test="userName != null">
-                user_name = #{userName},
+                user_name = $pound$brace_b userName $brace_e,
             </if>
-            <if test="type != null">
-                type = #{type},
+            <if test="userType != null">
+                type = $pound$brace_b user_type $brace_e,
             </if>
         </set>
-        WHERE id = #{id}
+        WHERE id = $pound$brace_b id $brace_e
     </update>
 
 </mapper>
