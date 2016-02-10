@@ -16,6 +16,8 @@
                 </fileSet>
             </fileSets>
         </module>
+
+
         <module id="${rootArtifactId}-common" dir="__rootArtifactId__-common" name="${rootArtifactId}-common">
             <fileSets>
                 <fileSet filtered="true" packaged="true" encoding="UTF-8">
@@ -23,6 +25,8 @@
                 </fileSet>
             </fileSets>
         </module>
+
+
         <module id="${rootArtifactId}-service" dir="__rootArtifactId__-service" name="${rootArtifactId}-service">
             <fileSets>
                 <fileSet filtered="true" packaged="true" encoding="UTF-8">
@@ -41,6 +45,7 @@
                         <include>**/*.xml</include>
                     </includes>
                 </fileSet>
+
                 <fileSet filtered="true" packaged="true" encoding="UTF-8">
                     <directory>src/test/java</directory>
                 </fileSet>
