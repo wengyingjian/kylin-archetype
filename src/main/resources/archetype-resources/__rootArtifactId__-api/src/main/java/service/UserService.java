@@ -18,7 +18,7 @@ import java.util.List;
 public class UserService {
 
     @Autowired
-    private aa.group.id.here.common.service.UserService userServiceRpc;
+    private ${package}.common.service.UserService userServiceRpc;
 
     /**
      * 列出指定类型的所有用户

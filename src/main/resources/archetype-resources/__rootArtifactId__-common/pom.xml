@@ -3,12 +3,14 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>${groupId}</groupId>
-        <artifactId>${rootArtifactId}</artifactId>
-        <version>${version}</version>
+        <groupId>com.wengyingjian.kylin</groupId>
+        <artifactId>kylin-parent</artifactId>
+        <version>1.0-SNAPSHOT</version>
     </parent>
 
+    <groupId>${groupId}</groupId>
     <artifactId>${artifactId}</artifactId>
+    <version>${version}</version>
     <packaging>jar</packaging>
 
     <dependencies>

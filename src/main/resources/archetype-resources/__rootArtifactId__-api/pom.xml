@@ -9,44 +9,13 @@
     </parent>
 
     <artifactId>${artifactId}</artifactId>
+    <version>${version}</version>
     <packaging>war</packaging>
 
     <dependencies>
         <dependency>
-            <groupId>${groupId}</groupId>
-            <artifactId>${rootArtifactId}-common</artifactId>
-            <version>${version}</version>
-        </dependency>
-        <dependency>
-            <groupId>com.wengyingjian.kylin</groupId>
-            <artifactId>kylin-redis</artifactId>
-        </dependency>
-        <dependency>
             <groupId>com.wengyingjian.kylin</groupId>
             <artifactId>kylin-rpc-client</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>com.wengyingjian.kylin</groupId>
-            <artifactId>kylin-log4j2</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-            <exclusions>
-                <exclusion>
-                    <artifactId>hibernate-validator</artifactId>
-                    <groupId>org.hibernate</groupId>
-                </exclusion>
-                <exclusion>
-                    <groupId>org.springframework.boot</groupId>
-                    <artifactId>spring-boot-starter-logging</artifactId>
-                </exclusion>
-            </exclusions>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-test</artifactId>
         </dependency>
     </dependencies>
 
