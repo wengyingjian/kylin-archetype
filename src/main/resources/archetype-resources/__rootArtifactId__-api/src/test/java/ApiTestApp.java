@@ -1,5 +1,7 @@
 package ${package};
 
+import org.springframework.boot.SpringApplication;
+
 /**
  * Created by wengyingjian on 16/2/11.
  */
