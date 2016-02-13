@@ -9,12 +9,12 @@ import ${package}.common.service.UserService;
 @Configuration
 public class ApiConfig {
 
-    @Value("${test.base.url}")
-    private String testBaseUrl;
+    @Value("${service.base.url}")
+    private String serviceBaseUrl;
 
     @Bean
     public UserService userServiceRpc() {
         String serviceExportName = "userService";
-        return UserService.class.cast(HessianProxyUtil.buildRemotingService(testBaseUrl, serviceExportName, UserService.class));
+        return UserService.class.cast(HessianProxyUtil.buildRemotingService(serviceBaseUrl, serviceExportName, UserService.class));
     }
 }

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <group>
+        <property name="service.base.url" defaultValue="http://localhost:8080/a" description="service url" />
+    </group>
+
+    <script>
+        <generate template="application.properties.vm" destfile="WEB-INF/classes/application.properties" />
+    </script>
+</config>
