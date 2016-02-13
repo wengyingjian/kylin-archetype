@@ -57,25 +57,4 @@
         </dependency>
     </dependencies>
 
-    <build>
-        <finalName>testService</finalName>
-        <plugins>
-            <plugin>
-                <groupId>com.alibaba.citrus.tool</groupId>
-                <artifactId>autoconfig-maven-plugin</artifactId>
-                <version>1.2</version>
-                <configuration>
-                    <userProperties>${autoconfig.file}</userProperties>
-                </configuration>
-                <executions>
-                    <execution>
-                        <phase>package</phase>
-                        <goals>
-                            <goal>autoconfig</goal>
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>
-        </plugins>
-    </build>
 </project>

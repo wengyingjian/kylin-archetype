@@ -20,14 +20,14 @@
     </dependencies>
 
     <build>
-        <finalName>testApi</finalName>
+        <finalName>${artifactId}</finalName>
         <plugins>
             <plugin>
                 <groupId>com.alibaba.citrus.tool</groupId>
                 <artifactId>autoconfig-maven-plugin</artifactId>
                 <version>1.2</version>
                 <configuration>
-                    <userProperties>${autoconfig.file}</userProperties>
+                    <userProperties>build/${autoconfig.file}</userProperties>
                 </configuration>
                 <executions>
                     <execution>
@@ -40,4 +40,5 @@
             </plugin>
         </plugins>
     </build>
+
 </project>

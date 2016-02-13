@@ -14,6 +14,12 @@
                 <fileSet filtered="true" encoding="UTF-8">
                     <directory>src/test/resources</directory>
                 </fileSet>
+                <fileSet filtered="true" packaged="false" encoding="UTF-8">
+                    <directory>build</directory>
+                    <includes>
+                        <include>antx*.properties</include>
+                    </includes>
+                </fileSet>
             </fileSets>
         </module>
 
@@ -29,9 +35,11 @@
 
         <module id="${rootArtifactId}-service" dir="__rootArtifactId__-service" name="${rootArtifactId}-service">
             <fileSets>
+                <!--src/main/java-->
                 <fileSet filtered="true" packaged="true" encoding="UTF-8">
                     <directory>src/main/java</directory>
                 </fileSet>
+                <!--src/main/resources-->
                 <fileSet filtered="true" encoding="UTF-8">
                     <directory>src/main/resources</directory>
                     <includes>
@@ -46,13 +54,24 @@
                     </includes>
                 </fileSet>
 
+                <!--src/test-->
                 <fileSet filtered="true" packaged="true" encoding="UTF-8">
                     <directory>src/test/java</directory>
                 </fileSet>
                 <fileSet filtered="true" encoding="UTF-8">
                     <directory>src/test/resources</directory>
                 </fileSet>
+
+                <!--antx*.properties-->
+                <fileSet filtered="true" packaged="false" encoding="UTF-8">
+                    <directory>build</directory>
+                    <includes>
+                        <include>antx*.properties</include>
+                    </includes>
+                </fileSet>
             </fileSets>
         </module>
     </modules>
+
+
 </archetype-descriptor>
