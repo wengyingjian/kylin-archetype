@@ -22,6 +22,8 @@
 
     <properties>
         <${rootArtifactId}-common.version>${version}</${rootArtifactId}-common.version>
+        <autoconfig.file>antx.properties</autoconfig.file>
+        <autoconfig.path>build</autoconfig.path>
     </properties>
 
     <dependencies>

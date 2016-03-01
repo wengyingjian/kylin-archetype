@@ -39,7 +39,7 @@
                 <artifactId>autoconfig-maven-plugin</artifactId>
                 <version>1.2</version>
                 <configuration>
-                    <userProperties>build/${autoconfig.file}</userProperties>
+                    <userProperties>${autoconfig.path}/${autoconfig.file}</userProperties>
                 </configuration>
                 <executions>
                     <execution>
